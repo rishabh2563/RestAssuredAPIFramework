@@ -1,0 +1,262 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-06T05:55:10.517Z",
+        "line": 15,
+        "name": "Verify if Place is being Successfuly Added",
+        "description": "",
+        "id": "validate-addplace-api-s;verify-if-place-is-being-successfuly-added;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1526397400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Add Place Payload \"Frontline house\" \"29, side layout, cohen 10\" \"French-IN\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Frontline house\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"29, side layout, cohen 10\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"French-IN\"",
+                  "offset": 64
+                }
+              ],
+              "location": "StepDefination.add_Place_Payload(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2979442300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User calls \"AddPlaceAPI\" using \"Post\" Http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPlaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Post\"",
+                  "offset": 31
+                }
+              ],
+              "location": "StepDefination.user_calls_using_Http_Request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2010700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Verifying The Staus Code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 28
+                }
+              ],
+              "location": "StepDefination.verifying_The_Staus_Code_as(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 561229800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"status\" in Response is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 24
+                }
+              ],
+              "location": "StepDefination.in_Response_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20758200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "\"scope\" in Response is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 23
+                }
+              ],
+              "location": "StepDefination.in_Response_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 782489900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "verify place_ID created maps to \"Frontline house\" using \"GetPlaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Frontline house\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"GetPlaceAPI\"",
+                  "offset": 56
+                }
+              ],
+              "location": "StepDefination.verify_place_ID_created_maps_to_using(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlace"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-06T05:55:16.403Z",
+        "before": [
+          {
+            "result": {
+              "duration": 287600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenarios()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "Verify if Delete Place API is working Properly or not",
+        "description": "",
+        "id": "validate-addplace-api-s;verify-if-delete-place-api-is-working-properly-or-not",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3044100,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Delete Place Payload",
+            "match": {
+              "location": "StepDefination.delete_Place_Payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1909349800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "User calls \"DeletePlaceAPI\" using \"Post\" Http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DeletePlaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Post\"",
+                  "offset": 34
+                }
+              ],
+              "location": "StepDefination.user_calls_using_Http_Request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 453500,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Verifying The Staus Code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 28
+                }
+              ],
+              "location": "StepDefination.verifying_The_Staus_Code_as(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 25009100,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "\"status\" in Response is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 24
+                }
+              ],
+              "location": "StepDefination.in_Response_is(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlace"
+          }
+        ]
+      }
+    ],
+    "name": "Validate ADDPlace API\u0027s",
+    "description": "",
+    "id": "validate-addplace-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/placeValidation.feature",
+    "tags": []
+  }
+]
